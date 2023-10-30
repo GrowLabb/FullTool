@@ -2,9 +2,149 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    }
-
-body{
-    background-color: #0D3B66;
+    list-style: none;
+    overflow-y: hidden;
 }
+@font-face{
+    font-family: "Finish";
+    src: url("./fonts/Montage-Demo.ttf");
+}
+@font-face{
+    font-family: "Firma";
+    src: url("./fonts/aAnotherTag.otf");
+}
+@font-face{
+    font-family: "h1";
+    src: url("./fonts/Summer\ Dream\ Sans\ DEMO\ .ttf");
+}
+body{
+    display: grid;
+    grid-template-rows: 20vh 75vh 5vh;
+    grid-template-columns: 22vw 78vw;
+    grid-template-areas: 
+    "nav title"
+    "nav mainn"
+    "bottom mainn";
+    background-color: #5CDB95;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: sticky;
+    top: 0%;
+    left: 22%;
+    grid-area: title;
+    font-family: h1;
+    font-size: 55px;
+    color: #EDF5E1;
+    z-index: 1;
+}
+header{
+    grid-area: nav;
+    display: flex;
+    position: sticky;
+    left: 0%;
+    background-color: #5CDB95;
+}
+header ul{
+    position: sticky;
+    top: 0%;
+    font-family: "Finish", cursive;
+    font-size: xx-large;
+    letter-spacing: 2px;
+    width: 100%;
+    display: flex;
+    gap: 52px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.headerElement, a, a:visited, a:link, a:active{
+    color: #05386B;
+    text-decoration: none;
+}
+.headerElement{
+    width: 100%;
+    text-align: center;
+}
+footer{
+    grid-area: bottom;
+    position: sticky;
+    left: 0%;
+    display: flex;
+    background-color: #5CDB95;
+}
+footer ul{
+    font-family: "Firma", cursive;
+    font-size: 40px;
+    display: flex;
+    width: 100%;
+    gap: 52px;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+main{
+    height: 100%;
+    grid-area: mainn;
+    display: flex;
+    align-items: start;
+    margin: auto;
+}
+.seccion{
+    display: grid;
+    grid-template-rows: 10vh 35vh;
+    grid-template-columns: 20vw 25vw;
+    height: auto;
+    margin: auto;
+    grid-template-areas: 
+    "question1 question1"
+    "desc animacionMain";
+}
+#pregunta1{
+    grid-area: question1;
+    font-family: "Finish", cursive;
+    font-weight: 100;
+}
+#desc1{
+    grid-area: desc;
+    font-family: "Finish", cursive;
+    font-size: 21px;
+}
+.animacionMain{
+    grid-area: animacionMain;
+}
+.seccion h2{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.hr{
+    position: absolute;
+    right: 0%;
+    height:60vh;
+    width:1px;
+    background-color: #05386B;
+    color: #05386B;
+    border: none;
+}
+#text-shadows{
+    z-index: 4;
+}
+img{
+    position: relative;
+}
+    #imagen1{
+    width: 50px;
+    height: 50px;
+    left: 12.1%;
+    top: -60.7%; 
+    z-index: 1;
+    }
+    #imagen2{
+    width: 60px;
+    height: 60px;
+    left: 51%;
+    top: -21%;
+    }
