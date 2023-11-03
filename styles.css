@@ -30,21 +30,21 @@ body{
 .title{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: flex-end;
-    position: sticky;
-    top: 0%;
-    left: 22%;
     grid-area: title;
     font-family: h1;
     font-size: 55px;
     color: #EDF5E1;
-    z-index: 1;
+}
+#descMain{
+    font-size: medium;
+    position: absolute;
+    top: 16%;
 }
 header{
     grid-area: nav;
     display: flex;
-    position: sticky;
-    left: 0%;
     background-color: #5CDB95;
 }
 header ul{
@@ -70,8 +70,6 @@ header ul{
 }
 footer{
     grid-area: bottom;
-    position: sticky;
-    left: 0%;
     display: flex;
     background-color: #5CDB95;
 }
@@ -129,22 +127,41 @@ main{
     color: #05386B;
     border: none;
 }
-#text-shadows{
-    z-index: 4;
+.text-shadows{
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 6px;
+    letter-spacing: 4px;
+    width: 100%;
 }
-img{
-    position: relative;
+#rueda1{
+    animation: spin 35s infinite;
 }
-    #imagen1{
-    width: 50px;
-    height: 50px;
-    left: 12.1%;
-    top: -60.7%; 
-    z-index: 1;
+#rueda2{
+    animation: spinNeg 35s infinite;
+}
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
     }
-    #imagen2{
-    width: 60px;
-    height: 60px;
-    left: 51%;
-    top: -21%;
+    to {
+      transform: rotate(360deg);
     }
+  }
+  @keyframes spinNeg {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }
+#subrayadoWavy{
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #007bff;
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+}
