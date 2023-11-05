@@ -14,18 +14,28 @@
     src: url("./fonts/aAnotherTag.otf");
 }
 @font-face{
+    font-family: "p";
+    src: url("./fonts/Poppins/Poppins-Italic.ttf");
+}
+@font-face{
+    font-family: "headerFont";
+    src: url("./fonts/Poppins/Poppins-ExtraBold.ttf");
+}
+@font-face{
     font-family: "h1";
     src: url("./fonts/Summer\ Dream\ Sans\ DEMO\ .ttf");
 }
+
 body{
+    background-image: linear-gradient(-225deg, #65379B 0%, #886AEA 53%, #6457C6 100%);
     display: grid;
-    grid-template-rows: 20vh 75vh 5vh;
+    grid-template-rows: 5vh 20vh 70vh 5vh;
     grid-template-columns: 22vw 78vw;
-    grid-template-areas: 
-    "nav title"
-    "nav mainn"
-    "bottom mainn";
-    background-color: #5CDB95;
+    grid-template-areas:
+        "nav ."
+        "nav title"
+        "nav mainn"
+        "bottom mainn";
 }
 .title{
     display: flex;
@@ -34,24 +44,23 @@ body{
     align-items: flex-end;
     grid-area: title;
     font-family: h1;
-    font-size: 55px;
-    color: #EDF5E1;
+    color: #FFEE32;
 }
 #descMain{
     font-size: medium;
     position: absolute;
-    top: 16%;
+    top: 20%;
+    color: #FFEE32;
 }
 header{
     grid-area: nav;
     display: flex;
-    background-color: #5CDB95;
 }
 header ul{
     position: sticky;
     top: 0%;
-    font-family: "Finish", cursive;
-    font-size: xx-large;
+    font-family: "headerFont", cursive;
+    font-size: large;
     letter-spacing: 2px;
     width: 100%;
     display: flex;
@@ -61,8 +70,11 @@ header ul{
     justify-content: center;
 }
 .headerElement, a, a:visited, a:link, a:active{
-    color: #05386B;
+    color: #a0b2c4;
     text-decoration: none;
+}
+a:hover{
+    text-decoration-style: solid #FFEE32;
 }
 .headerElement{
     width: 100%;
@@ -71,7 +83,6 @@ header ul{
 footer{
     grid-area: bottom;
     display: flex;
-    background-color: #5CDB95;
 }
 footer ul{
     font-family: "Firma", cursive;
@@ -87,31 +98,30 @@ main{
     height: 100%;
     grid-area: mainn;
     display: flex;
-    align-items: start;
+    align-items: center;
     margin: auto;
 }
 .seccion{
     display: grid;
-    grid-template-rows: 10vh 35vh;
-    grid-template-columns: 20vw 25vw;
+    grid-template-rows: 45vh;
+    grid-template-columns: 20vw 20vw;
     height: auto;
-    margin: auto;
-    grid-template-areas: 
-    "question1 question1"
-    "desc animacionMain";
-}
-#pregunta1{
-    grid-area: question1;
-    font-family: "Finish", cursive;
-    font-weight: 100;
+    grid-template-areas: "desc animacionMain";
 }
 #desc1{
+    display: flex;
+    align-items: center;
     grid-area: desc;
-    font-family: "Finish", cursive;
-    font-size: 21px;
+    font-family: "p", cursive;
+    font-size: 19px;
+    color: #05386B;
+    color: #bdcddb;
 }
 .animacionMain{
+    display: flex;
+    align-items: center;
     grid-area: animacionMain;
+    justify-content: center;
 }
 .seccion h2{
     display: grid;
@@ -129,17 +139,21 @@ main{
 }
 .text-shadows{
     display: flex;
-    align-items: stretch;
+    align-items: baseline;
     justify-content: center;
+    font-size: 151px;
     gap: 6px;
     letter-spacing: 4px;
     width: 100%;
 }
+#nameFooter a{
+    color: black;
+}
 #rueda1{
-    animation: spin 35s infinite;
+    animation: spin 30s infinite;
 }
 #rueda2{
-    animation: spinNeg 35s infinite;
+    animation: spinNeg 28s infinite;
 }
 @keyframes spin {
     from {
@@ -160,7 +174,7 @@ main{
 #subrayadoWavy{
     text-decoration: underline;
     text-decoration-style: wavy;
-    text-decoration-color: #007bff;
+    text-decoration-color: #ffffff;
     text-decoration-line: underline;
     text-underline-offset: 4px;
     text-decoration-thickness: 2px;
